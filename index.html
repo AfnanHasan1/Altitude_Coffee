@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Altitude Home</title>
+	<link rel="stylesheet" href="assets/CSS/style.css">
+	<meta charset="UTF-8">
+
+	<!-- Imports the Lexend font family from Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class = "home-body">
+
+	<!-- The header contains the logo centered at the top and the main navigation bar on the right side -->
+	<header>
+		<div class = "logo-container">
+		<a href="index.html">
+			<img src="assets/images/altitude_logo.png" alt="Altitude Coffee Logo" class="logo">
+		</a>
+		</div>
+		<nav class="right-navigation-bar">
+			<ul class="navigation">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="locations.html">Locations</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wraps the main content and sidebar side-by-side -->
+	<div class="content-wrapper">
+
+		<!-- Contains quick links to other related pages such as “Meet the Crew” and “About Us” -->
+        <aside class="sidebar">
+			<h2 class="sidebar-heading">While you're here...</h2>
+            <nav class="sidebar-navigation">
+                <ul>
+                    <li><a href="the_crew.html">The crew</a></li>
+                    <li><a href="about.html">About us</a></li>
+					<li><a href="locations.html">Find us!</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+	<!-- Contains the homepage promotional content with two main promotional areas -->
+	<main class="full-content">
+
+	<!-- === Featured Promo Section === -->
+    <!-- Displays the newest drink promotion with text and an image side by side -->
+	<section class="promo-section">
+		<div class="promo-text">
+			<h2>The newest sips!</h2>
+			<p>
+			Welcome the newest addition to the menu, the Iced Spanish Macha Latte! 
+			A refreshing blend of matcha green tea, milk, and a touch of sweetness, served over ice. 
+			</p>
+			<a href="menu.html" class="menu-button">Menu</a>
+		</div>
+
+		<div class="promo-image">
+			<img src="assets/images/spanish_latte.png" alt="Iced Spanish Macha Latte">
+		</div>
+	</section>
+
+	<!-- === Two-Column Promo Section === -->
+    <!-- Displays two promotional cards side-by-side: one for desserts and one for new locations -->
+	<section class="two-column-promo">
+        
+		<!-- Left promo card – features dessert and sweet items -->
+        <div class="promo-card">
+            <div class="card-image-container">
+                <img src="assets/images/menu_pic.png" alt="menu pic 2" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3>Sweet like you ;)</h3>
+                <p>
+                Not feeling coffee? Sweeten up your day with our delightful range of cakes and Açaí na tigela
+				with a side of tea or a milkshake. Perfect for any time of the day!
+                </p>
+				<a href="menu.html" class="menu-button-2">Menu</a>
+            </div>
+        </div>
+
+		<!-- Right promo card – announces a new branch opening -->
+        <div class="promo-card mirror">
+            <div class="card-image-container">
+                <img src="assets/images/locations.png" alt="locations image" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3>New Location alert!</h3>
+                <p>
+                An all new altitude coffee branch is opening in the heart of Al Quoz!
+				Opening discounts on all food and beverages for the first 5 days! Starting from 15th of October.
+                </p>
+				<a href="locations.html" class="menu-button-2 mirror">Locations</a>
+            </div>
+        </div>
+
+    </section>
+	</main>
+	</div>
+
+	<!-- Displays copyright information at the bottom of the page -->
+	<footer>
+		<p>&copy; Copyright 2025 Altitude Coffee</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,505 @@
+* {
+	box-sizing: border-box;   /* Ensures padding/border doesn't affect element width */
+}
+
+.about-body, .menu-body, .home-body, .locations, .crew-body {
+    background-image: url('../images/bgall.png');     /* Sets background image for the menu page*/
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center center;       /* Centers the image in the background */
+}
+.about-body{
+	color: white;
+}
+/*COMMON HEADER FOR ALL FILES*/
+header {
+	background-color: #E5E4E2;
+	width: 100%;
+	position: fixed;    /* Keeps header at top */
+	top: 0;
+	left: 0;
+	padding: 0px 20px;
+	border-bottom: 1px solid #ddd;
+	z-index: 1000;       /* Ensures header is above other elements */
+	overflow: hidden;		/* Hides overflowing child elements preventing break in layout */
+	height: 100px;         /* Fixed header height */
+}
+footer{
+	padding-left: 10px;
+	color: white;
+}
+
+.logo-container {
+	float: left;
+	width: 50%;
+	text-align: left; 
+	position: relative;    /* Enables vertical centering for child elements */
+	height: 100px; 
+}	
+	
+.right-navigation-bar {
+	float: right;
+	width: 50%;
+	text-align: right;
+	height: 100px; 
+	display: flex;          /* Flexbox for vertical alignment */
+	align-items: center;     /* Vertically center nav items */
+	justify-content: flex-end;     /* Keep nav items on right */
+}
+
+.logo {
+	background: transparent;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;    /* Makes logo circular */
+	object-fit: cover;     /* Ensures image covers the container */
+}  
+
+.navigation li {
+	display: inline-block;     /* Horizontally setting menu items */
+	margin: 0 10px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.navigation a:hover {
+	color: #8B4513; 
+}
+
+/*INDEX (HOME) PAGE */
+
+.content-wrapper {
+	display: flex;
+	align-items: flex-start; 
+}
+
+/*Styling the Sidebar*/
+.sidebar {
+	width: 200px;
+	padding: 30px 10px;
+	background-color: #E5E4E2;
+	border-radius: 10px;
+	margin-top: 30px;
+}
+
+.sidebar-heading {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0px 15px;
+}
+
+/* Sidebar navigation links */
+.sidebar-navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-navigation a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	padding: 10px 15px;
+	display: block;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	font-size: 1.1rem;
+}
+
+.sidebar-navigation a:hover {
+	background-color: #8B4513;
+	color: white;
+}
+.promo-section {
+	display: flex;      /* Flexbox layout for side-by-side image & text */              
+	align-items: center;         /* Vertically centers content */    
+	background-color: #5b3a2e;   
+	color: #fff;                    
+	padding: 0;
+	width: 60%;   
+	margin: 50px auto;      
+	overflow: hidden;       
+	border-radius: 10px;       
+}
+
+.promo-text {
+	flex: 0 0 50%;      /* Prevents growth/shrink taking exactly 50% of width */               
+	max-width: 50%;               
+	text-align:center;
+	padding: 60px 40px;
+}
+.promo-text h2 {
+	font-size: 2.5rem;
+	margin-bottom: 25px;
+	font-weight: 700;
+}
+.promo-text p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	margin-bottom: 25px;
+}
+
+.menu-button {
+	background: transparent;     
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 10px 25px;
+	font-size: 1rem;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.3s ease;
+	font-family: 'Lexend', sans-serif;
+	text-decoration: none;
+}
+.menu-button:hover {
+	background: #fff;
+	color: #5b3a2e;
+}
+
+.promo-image {
+	flex: 0 0 50%;                    
+	height: 100%
+}
+.promo-image img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;   /* Scales image to cover container without stretching */
+	margin: 0;
+	display: block;
+}
+.two-column-promo {
+    display: flex; 
+    justify-content: center;    /* Centers the cards in the container horizontally */
+    align-items: flex-start; 	/* Aligns cards at the top vertically, which is the start of the flexbox*/
+    gap: 40px;			/* Space between cards */
+    margin: 80px auto; 
+    width: 90%; 
+    max-width: 1200px; 
+}
+.promo-card {
+	flex: 1;   /* Allows card to grow and shrink evenly in container */
+    max-width: 550px;
+    background-color: #7E354D;
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+    flex-direction: row;
+    align-items: stretch;    /* Stretches child elements to same height */
+   	min-height: 400px;
+}
+
+/* Mirrored card layout */
+.promo-card.mirror{
+    flex-direction: row-reverse;    /* Swaps image & text position */
+	background-color: #0056b3;   
+}
+.card-image-container {
+    flex: 1;      /* Takes equal space as content */
+    display: flex;		/* Centers the image inside */
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden; 
+}
+.card-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+.card-content {
+    flex: 1;
+    display: flex; 
+    flex-direction: column; 	  /* Stack heading, text, button vertically */
+    justify-content: center;  	  /* Vertically center text inside card */
+    align-items: center;
+    padding: 30px; 
+    color: #ffffff;
+    text-align: center; 
+}
+.card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #ffffff; 
+}
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center; 
+    width: 90%;       
+}
+.menu-button-2 {
+    background: transparent;     /* Makes button background transparent */
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 10px 25px;
+	font-size: 1rem;
+	border-radius: 20px;
+	cursor: pointer;            /* Changes cursor to pointer on hover */
+	transition: 0.3s ease;
+	font-family: 'Lexend', sans-serif;
+	text-decoration: none;
+}
+.menu-button-2:hover {
+	background: #fff;
+	color: #7E354D;
+}
+.menu-button-2.mirror:hover {
+    background: #fff;
+	color: #0056b3;
+}
+
+@media (max-width: 768px) {
+.promo-section {
+    flex-direction: column;       /* Stack image above/below text on mobile or smaller screens */
+    text-align: center;
+}
+.promo-text, .promo-image {
+	max-width: 100%;
+}
+.two-column-promo {
+    flex-direction: column;        
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.promo-card {
+    flex-direction: column; 		/* Stack image above content */
+    max-width: 90%;
+    min-height: unset;			/* Remove fixed height for responsiveness */
+}
+.promo-card.mirror-layout {
+    flex-direction: column; 
+}
+.card-text-panel, .card-image-panel {
+    flex: unset; 
+    width: 100%; 
+}
+.card-image-panel {
+    height: 200px;
+}
+.footer {
+	margin-top: auto;
+}
+}
+
+/*COMMON BODY FOR ALL FILES */
+
+body {
+	margin: 0;
+	padding-top: 100px; 
+	font-family: 'Lexend', sans-serif;
+	min-height: 10vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/*LOCATIONS PAGE WITH SAME STRUCTURE AS INDEX (HOME) PAGE*/
+
+.sidebar.mirror {
+	margin-left: auto;
+}
+.main-content {
+	flex: 3;
+	padding: 30px;
+}
+.main-content h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	color: #4b3b32;
+}
+	/* Location cards */
+.location-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.location-card {
+	display: flex;
+	gap: 20px;
+	background: #fefefe;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.location-image {
+	flex: none;          /* disables flex growth */
+	width: 250px;   
+}
+.location-image img {
+	width: 100%;
+	height: 100%;
+	object-fit:fill;
+	display: block;
+}
+.location-info {
+	flex: 2;
+	padding: 20px;
+}
+	.hours-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 5px;
+}
+
+/* MENU PAGE WITH TABLE AND BACKGROUND*/
+
+.menu-row {
+ 	display: flex;
+    justify-content: center; 	/* Centers the columns in the container horizontally */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.menu-col {
+	width: 35%; 
+    min-width: 300px; 
+}
+
+table {
+	width: 100%;
+   	border-collapse: collapse;        /* Merges table borders for a smooth look */
+    margin-top: 10px;
+	margin: 0px auto;
+   	background-color: #fff;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+th, td {
+  	padding: 10px;
+ 	border: 1px solid #eee;
+  	text-align: center;
+}
+
+td:last-child {
+    text-align: right;
+	font-weight: bold;
+}
+
+#milkalt + table td {
+    text-align: center;
+    font-weight: normal;
+}
+
+#espresso, #caffeine-free, #tea, #manualbar, #acai, #toppings, #milkalt, #food {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;	       /*font size relative to the parent element*/
+	color: #ffffff;
+} 
+#stitle {
+	text-align: center;
+}
+
+/*MEET THE CREW PAGE*/
+.crew-body {
+	color: white;
+}
+.crewbox {
+  	display: flex;
+  	align-items: center;
+  	margin-bottom: 20px;
+  	padding: 15px;
+  	border-radius: 10px;
+}
+.cphoto {
+  	width: 140px;
+  	height: 140px;
+  	border-radius: 8px;
+  	object-fit: cover;
+  	margin-right: 20px;
+  	border: 3px solid ; 
+}
+.crewstatement h3 {
+  	margin: 0;			/* Removes default margin for better spacing */
+}
+.crewstatement p {
+  	margin: 5px 0;
+}
+.playlist {
+  	padding: 30px;
+  	border-radius: 15px;
+  	margin-top: 40px; 
+  	width: 100%;                
+  	margin-left: 0;            	
+  	margin-right: auto;          
+	box-sizing: border-box;		/* Ensures padding doesn't affect width */
+}
+.playlist-layout {
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: space-between;        /* Puts space between left and right columns */
+  	gap: 40px;
+  	flex-direction: row; 
+}
+.left-column {
+  	flex: 2;
+  	display: flex;
+  	flex-direction: column;
+  	gap: 10px;
+}
+.tracks {
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	background: rgba(255, 255, 255, 0.15);
+  	padding: 10px 15px;
+  	border-radius: 8px;				
+}
+.number, .title {
+  	width: 20px;
+  	font-weight: bold;
+}
+.title {
+  	flex: 1;
+  	margin-left: 10px;
+  	font-weight: 600;
+}
+.artist {
+  	opacity: 0.85;   	/* Slightly faded text for artist name */
+  	font-size: 0.9em;
+}
+.right-column {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+.album-box {
+  	width: 150px;
+  	height: 150px;
+  	border-radius: 12px;
+  	overflow: hidden;			/* Ensures image doesn't overflow container */
+  	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	background: #fff; 
+}
+.album-box img {
+  	width: 100%;
+  	height: 100%;
+  	object-fit: cover;  
+  	display: block;    
+}
+.now-playing {
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	text-align: center;
+}
